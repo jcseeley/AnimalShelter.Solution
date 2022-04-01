@@ -28,6 +28,6 @@ namespace AnimalShelter.Models
       );
     }
     public DbSet<Dog> Dogs { get; set; }
-    public DbSet<Dog> Cats { get; set; }
+    public DbSet<Cat> Cats { get; set; }
   }
 }

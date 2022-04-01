@@ -37,7 +37,7 @@ namespace AnimalShelter.Migrations
 
                     b.HasKey("CatId");
 
-                    b.ToTable("Cat");
+                    b.ToTable("Cats");
 
                     b.HasData(
                         new
@@ -91,7 +91,7 @@ namespace AnimalShelter.Migrations
 
                     b.HasKey("DogId");
 
-                    b.ToTable("Dog");
+                    b.ToTable("Dogs");
 
                     b.HasData(
                         new

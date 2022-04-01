@@ -8,7 +8,7 @@ namespace AnimalShelter.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Cat",
+                name: "Cats",
                 columns: table => new
                 {
                     CatId = table.Column<int>(type: "int", nullable: false)
@@ -19,11 +19,11 @@ namespace AnimalShelter.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Cat", x => x.CatId);
+                    table.PrimaryKey("PK_Cats", x => x.CatId);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Dog",
+                name: "Dogs",
                 columns: table => new
                 {
                     DogId = table.Column<int>(type: "int", nullable: false)
@@ -34,11 +34,11 @@ namespace AnimalShelter.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Dog", x => x.DogId);
+                    table.PrimaryKey("PK_Dogs", x => x.DogId);
                 });
 
             migrationBuilder.InsertData(
-                table: "Cat",
+                table: "Cats",
                 columns: new[] { "CatId", "Age", "Gender", "Name" },
                 values: new object[,]
                 {
@@ -49,7 +49,7 @@ namespace AnimalShelter.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "Dog",
+                table: "Dogs",
                 columns: new[] { "DogId", "Age", "Gender", "Name" },
                 values: new object[,]
                 {
@@ -63,10 +63,10 @@ namespace AnimalShelter.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Cat");
+                name: "Cats");
 
             migrationBuilder.DropTable(
-                name: "Dog");
+                name: "Dogs");
         }
     }
 }
