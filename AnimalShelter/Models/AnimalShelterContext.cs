@@ -11,23 +11,18 @@ namespace AnimalShelter.Models
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
-      builder.Entity<Dog>()
+      builder.Entity<Animal>()
         .HasData(
-        new Dog { DogId = 1, Name = "Mathias McDog", Gender = "Male", Age = 1 },
-        new Dog { DogId = 2, Name = "Sally Sandwichstealer", Gender = "Female", Age = 2 },
-        new Dog { DogId = 3, Name = "Peter Poopeater", Gender = "Male", Age = 2 },
-        new Dog { DogId = 4, Name = "Samantha Sniffsalot", Gender = "Female", Age = 3 }
-      );
-
-      builder.Entity<Cat>()
-        .HasData(
-        new Cat { CatId = 1, Name = "Catrina McMeow", Gender = "Female", Age = 1 },
-        new Cat { CatId = 2, Name = "Henry Hiss", Gender = "Male", Age = 2 },
-        new Cat { CatId = 3, Name = "Pamela Pushitoff", Gender = "Female", Age = 2 },
-        new Cat { CatId = 4, Name = "Benjamin Bartholomeow", Gender = "Male", Age = 3 }
+        new Animal { AnimalId = 1, Type = "Dog", Name = "Mathias McDog", Gender = "Male", Age = 1 },
+        new Animal { AnimalId = 2, Type = "Dog", Name = "Sally Sandwichstealer", Gender = "Female", Age = 2 },
+        new Animal { AnimalId = 3, Type = "Dog", Name = "Peter Poopeater", Gender = "Male", Age = 2 },
+        new Animal { AnimalId = 4, Type = "Dog", Name = "Samantha Sniffsalot", Gender = "Female", Age = 3 },
+        new Animal { AnimalId = 5, Type = "Cat", Name = "Catrina McMeow", Gender = "Female", Age = 1 },
+        new Animal { AnimalId = 6, Type = "Cat", Name = "Henry Hiss", Gender = "Male", Age = 2 },
+        new Animal { AnimalId = 7, Type = "Cat", Name = "Pamela Pushitoff", Gender = "Female", Age = 2 },
+        new Animal { AnimalId = 8, Type = "Cat", Name = "Benjamin Bartholomeow", Gender = "Male", Age = 3 }
       );
     }
-    public DbSet<Dog> Dogs { get; set; }
-    public DbSet<Cat> Cats { get; set; }
+    public DbSet<Animal> Animals { get; set; }
   }
 }

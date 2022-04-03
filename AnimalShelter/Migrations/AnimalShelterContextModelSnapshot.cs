@@ -16,9 +16,9 @@ namespace AnimalShelter.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 64)
                 .HasAnnotation("ProductVersion", "5.0.0");
 
-            modelBuilder.Entity("AnimalShelter.Models.Cat", b =>
+            modelBuilder.Entity("AnimalShelter.Models.Animal", b =>
                 {
-                    b.Property<int>("CatId")
+                    b.Property<int>("AnimalId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
@@ -35,92 +35,79 @@ namespace AnimalShelter.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50) CHARACTER SET utf8mb4");
 
-                    b.HasKey("CatId");
-
-                    b.ToTable("Cats");
-
-                    b.HasData(
-                        new
-                        {
-                            CatId = 1,
-                            Age = 1,
-                            Gender = "Female",
-                            Name = "Catrina McMeow"
-                        },
-                        new
-                        {
-                            CatId = 2,
-                            Age = 2,
-                            Gender = "Male",
-                            Name = "Henry Hiss"
-                        },
-                        new
-                        {
-                            CatId = 3,
-                            Age = 2,
-                            Gender = "Female",
-                            Name = "Pamela Pushitoff"
-                        },
-                        new
-                        {
-                            CatId = 4,
-                            Age = 3,
-                            Gender = "Male",
-                            Name = "Benjamin Bartholomeow"
-                        });
-                });
-
-            modelBuilder.Entity("AnimalShelter.Models.Dog", b =>
-                {
-                    b.Property<int>("DogId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<int>("Age")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Gender")
+                    b.Property<string>("Type")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("varchar(50) CHARACTER SET utf8mb4");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar(50) CHARACTER SET utf8mb4");
+                    b.HasKey("AnimalId");
 
-                    b.HasKey("DogId");
-
-                    b.ToTable("Dogs");
+                    b.ToTable("Animals");
 
                     b.HasData(
                         new
                         {
-                            DogId = 1,
+                            AnimalId = 1,
                             Age = 1,
                             Gender = "Male",
-                            Name = "Mathias McDog"
+                            Name = "Mathias McDog",
+                            Type = "Dog"
                         },
                         new
                         {
-                            DogId = 2,
+                            AnimalId = 2,
                             Age = 2,
                             Gender = "Female",
-                            Name = "Sally Sandwichstealer"
+                            Name = "Sally Sandwichstealer",
+                            Type = "Dog"
                         },
                         new
                         {
-                            DogId = 3,
+                            AnimalId = 3,
                             Age = 2,
                             Gender = "Male",
-                            Name = "Peter Poopeater"
+                            Name = "Peter Poopeater",
+                            Type = "Dog"
                         },
                         new
                         {
-                            DogId = 4,
+                            AnimalId = 4,
                             Age = 3,
                             Gender = "Female",
-                            Name = "Samantha Sniffsalot"
+                            Name = "Samantha Sniffsalot",
+                            Type = "Dog"
+                        },
+                        new
+                        {
+                            AnimalId = 5,
+                            Age = 1,
+                            Gender = "Female",
+                            Name = "Catrina McMeow",
+                            Type = "Cat"
+                        },
+                        new
+                        {
+                            AnimalId = 6,
+                            Age = 2,
+                            Gender = "Male",
+                            Name = "Henry Hiss",
+                            Type = "Cat"
+                        },
+                        new
+                        {
+                            AnimalId = 7,
+                            Age = 2,
+                            Gender = "Female",
+                            Name = "Pamela Pushitoff",
+                            Type = "Cat"
+                        },
+                        new
+                        {
+                            AnimalId = 8,
+                            Age = 3,
+                            Gender = "Male",
+                            Name = "Benjamin Bartholomeow",
+                            Type = "Cat"
                         });
                 });
 #pragma warning restore 612, 618
