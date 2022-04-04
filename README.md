@@ -2,7 +2,8 @@
 
 #### By Jase Seeley
 
-#### A web API to view adoptable cats and dogs at an animal shelter.
+#### Epicodus Week #13 Independent Code Review: Building an API   
+* A web API to view adoptable cats and dogs at an animal shelter.
 
 ## Technologies Used
 * ASP.NET Core
