@@ -5,6 +5,8 @@
 #### Epicodus Week #13 Independent Code Review: Building an API   
 * A web API to view adoptable cats and dogs at an animal shelter.
 
+![Swagger Screenshot](./AnimalShelter.png)
+
 ## Technologies Used
 * ASP.NET Core
 * C#
